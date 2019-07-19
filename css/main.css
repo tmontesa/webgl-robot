@@ -1,0 +1,32 @@
+* {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    color: #eee;
+}
+
+body {
+    display: flex;
+    background-color: #222;
+    background-image: url('/assets/image/pexels-photo-2387532.jpeg');
+    // https://www.pexels.com/photo/abstract-design-diagonal-grayscale-2387532/
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 1px 1px 5px rgba(0,0,0,1),
+    1px 1px 10px rgba(0,0,0,1),
+    1px 1px 15px rgba(0,0,0,1);
+}
+
+main {
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background: rgba(0,0,0, 0.75);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5),
+    0 0 25px rgba(0,0,0,0.5),
+    0 0 50px rgba(0,0,0,0.25);
+}
