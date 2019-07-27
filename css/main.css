@@ -5,14 +5,13 @@
 
 body {
     display: flex;
-    background-color: #222;
-    background-image: url('/assets/image/pexels-photo-2387532.jpeg');
-    // https://www.pexels.com/photo/abstract-design-diagonal-grayscale-2387532/
+    background-color: rgb(198, 234, 255);
+    background-image: url('/assets/image/parking-parking-lot-underground-garage.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    text-shadow: 1px 1px 5px rgba(0,0,0,1),
-    1px 1px 10px rgba(0,0,0,1),
-    1px 1px 15px rgba(0,0,0,1);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.75),
+    1px 1px 10px rgba(0, 0, 0, 0.75),
+    1px 1px 15px rgba(0, 0, 0, 0.75);
 }
 
 main {
@@ -22,11 +21,47 @@ main {
 }
 
 canvas {
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.75);
     margin-bottom: 30px;
     border-radius: 10px;
-    background: rgba(0,0,0, 0.75);
-    box-shadow: 0 0 15px rgba(0,0,0,0.5),
-    0 0 25px rgba(0,0,0,0.5),
-    0 0 50px rgba(0,0,0,0.25);
+    background: rgba(255, 255, 255, 0.75);
+    background-image: url('/assets/models/sky/sky.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25),
+    0 0 25px rgba(0, 0, 0, 0.25),
+    0 0 50px rgba(0, 0, 0, 0.15);
 }
+
+.aside {
+    font-family: monospace;
+    font-size: 10px;
+    padding: 4px 8px;
+    margin: 14px 16px;
+    background: rgba(0.0, 0.0, 0.0, 0.75);
+    color: #eee;
+    position: fixed;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.aside.bottom-left{
+    bottom: 0;
+    left: 0;
+}
+
+.aside.bottom-right{
+    bottom: 0;
+    right: 0;
+}
+
+.aside.top-left{
+    top: 0;
+    left: 0;
+}
+
+.aside.top-right{
+    top: 0;
+    right: 0;
+}
+

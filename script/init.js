@@ -19,13 +19,20 @@ function initialize() {
     
     // Set viewport & clear color.
     gl.viewport(0, 0, canvas.width, canvas.height);
-    gl.clearColor(1, 1, 1, 1.0);
+    gl.clearColor(0.2, 0.2, 0.2, 1.0);
 
     // Load shaders.
-    program = initialize_shaders(gl, "shaders/vs-basic.glsl", "shaders/vs-basic.glsl");
+    program = initialize_shaders(gl, "shaders/main.vs.glsl", "shaders/main.fs.glsl");
     gl.useProgram(program);
-    
 
+    // Initialization
+    init_transformations();
+    init_models();
+    init_lighting();
+    var u_sampler = gl.getUniformLocation(program, "u_sampler");
+    gl.uniform1i(u_sampler, 0);
+
+    // Enable culling.
     gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);
     gl.enable(gl.DEPTH_TEST);
     gl.enable(gl.CULL_FACE);

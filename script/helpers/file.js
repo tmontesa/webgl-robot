@@ -19,3 +19,13 @@ function loadFileAJAX(filename) {
     return xhr.status == status 
         ? xhr.responseText : null;
 };
+
+function loadFileAJAXasJSON(filename) {
+    return JSON.parse(loadFileAJAX(filename));
+}
+
+function loadImage(filename) {
+    var img = new Image();
+    img.src = filename;
+    return img;
+}

@@ -34,3 +34,7 @@ function calculate_vertex_normals(f, v, nf) {
  
     return nv;
 }
+
+function calculate_normal_matrix() {
+    
+}
