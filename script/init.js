@@ -22,15 +22,13 @@ function initialize() {
     gl.clearColor(0.2, 0.2, 0.2, 1.0);
 
     // Load shaders.
-    program = initialize_shaders(gl, "shaders/main.vs.glsl", "shaders/main.fs.glsl");
+    program = initialize_shaders(gl, "shaders/basic.vs.glsl", "shaders/basic.fs.glsl");
     gl.useProgram(program);
 
     // Initialization
+    u_color = GLCreateUniform(GLUniformType.VECTOR, program, "u_color", [1.0, 1.0, 1.0]);
     init_transformations();
     init_models();
-    init_lighting();
-    var u_sampler = gl.getUniformLocation(program, "u_sampler");
-    gl.uniform1i(u_sampler, 0);
 
     // Enable culling.
     gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);

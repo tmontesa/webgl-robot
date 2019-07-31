@@ -20,6 +20,11 @@ function calculate_face_normals(f, v) {
 }
 
 function calculate_vertex_normals(f, v, nf) {
+
+    if (nf == null) {
+        var nf = calculate_face_normals(f, v);
+    }
+
     var nv = new Array(v.length).fill(vec3());
 
     for (var i = 0; i < f.length; i++) {
@@ -33,8 +38,4 @@ function calculate_vertex_normals(f, v, nf) {
     }
  
     return nv;
-}
-
-function calculate_normal_matrix() {
-    
 }

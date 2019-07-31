@@ -25,7 +25,6 @@ canvas {
     margin-bottom: 30px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.75);
-    background-image: url('/assets/models/sky/sky.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25),
@@ -65,3 +64,7 @@ canvas {
     right: 0;
 }
 
+.slider {
+    outline: none;
+    
+}

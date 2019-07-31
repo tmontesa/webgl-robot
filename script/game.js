@@ -11,6 +11,8 @@ document.addEventListener("keyup", handlerKeyUp, false);
 document.addEventListener("mousedown", handlerMouseDown, false);
 document.addEventListener("mouseup", handlerMouseUp, false);
 document.addEventListener("mousemove", handlerMousePosition, false);
+canvas_offset_x = document.getElementById("game").offsetLeft;
+canvas_offset_y = document.getElementById("game").offsetTop;
 
 //
 // Game Loop

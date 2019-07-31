@@ -5,13 +5,14 @@
 </head>
 
 <body onload="initialize();">
-    <div id="player_information" class="aside bottom-right">(0.0, 0.0, 0.0)</div>
+    <div id="info" class="aside bottom-left">Initializing...</div>
     <div class="aside top-left">
-        Use the [UP/DOWN] keys to move forward and backward.<br />
-        Use the [LEFT/RIGHT] keys to turn the camera.<br />
-        Use [SPACE] to move camera upwards, and [LSHIFT] to move downwards.<br />
-        Use [S] to change the speed of movement.<br />
-        NOTE: It may take a few seconds for everything to load.
+        Base Angle:<br />
+        <input class="slider" id="base" type="range" min="-360" max="360" value="0"><br /><br />
+        Lower Arm Angle:<br />
+        <input class="slider" id="larm" type="range" min="-180" max="180" value="0"><br /><br />
+        Upper Arm Angle:<br />
+        <input class="slider" id="uarm" type="range" min="-180" max="180" value="0">
     </div>
     <main>
         <h1>WebGL Robot</h1>
@@ -30,21 +31,24 @@
 <script src="script/helpers/normal.js"></script>
 <script src="script/helpers/handlers.js"></script>
 <script src="script/helpers/file.js"></script>
+<script src="script/helpers/sqrt.js"></script>
 
 <script src="script/webgl/uniform.js"></script>
 <script src="script/webgl/attribute.js"></script>
 <script src="script/webgl/buffer.js"></script>
-<script src="script/webgl/lights.js"></script>
-<script src="script/webgl/model.js"></script>
 <script src="script/webgl/transform.js"></script>
-<script src="script/webgl/texture.js"></script>
+<script src="script/webgl/model.js"></script>
 <script src="script/webgl/render.js"></script>
 
+<script src="script/objects/node.js"></script>
+<script src="script/objects/mesh.js"></script>
+<script src="script/objects/mesh/cylinder.js"></script>
+<script src="script/objects/mesh/box.js"></script>
+<script src="script/objects/mesh/sphere.js"></script>
+
 <script src="script/init/shaders.js"></script>
-<script src="script/init/textures.js"></script>
 <script src="script/init/transformations.js"></script>
 <script src="script/init/models.js"></script>
-<script src="script/init/lighting.js"></script>
 
 <script src="script/game-update.js"></script>
 <script src="script/game-render.js"></script>
