@@ -1,3 +1,10 @@
+//
+// webgl/render.js
+// =========
+// Helper functions to make it easier to render my abstracted conception of models.
+//
+
+
 function RenderModel(model, draw_type, color) {
     if (!(model instanceof Model)) {
         console.error(`Model given is invalid.`);

@@ -1,4 +1,11 @@
 //
+// webgl/uniform.js
+// =========
+// A more abstract version of WebGL's uniforms, with helper functions.
+//
+
+
+//
 // GLUniform Object
 //
 

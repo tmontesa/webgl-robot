@@ -1,3 +1,9 @@
+//
+// init/transformations.js
+// =========
+// Contains global varaibles, and initialization for projection and model-view matrices.
+//
+
 var u_mWorld, u_mView, u_mProj, u_mNormal;
 
 const bounds = {

@@ -1,3 +1,9 @@
+//
+// objects/mesh/box.js
+// =========
+// Creates a type Mesh containing vertices and faces of a box.
+//
+
 function CreateMeshBox(length, width, depth) {
     var vertices = VerticesMeshBox(length, width, depth);
     var indices = IndicesMeshBox();

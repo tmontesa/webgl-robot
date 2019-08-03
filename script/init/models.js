@@ -1,3 +1,9 @@
+//
+// init/models.js
+// =========
+// Contains global varaibles, and initialization for models.
+//
+
 var base, larm, uarm;
 const base_height = 0.5;
 const larm_length = 2.0;

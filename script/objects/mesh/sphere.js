@@ -1,3 +1,12 @@
+//
+// objects/mesh/sphere.js
+// =========
+// Creates a type Mesh containing vertices and faces of a sphere.
+//
+
+// Note: Sphere model was created by myself in Blender.
+// It was then exported to OBJ and converted into JSON to be parsed.
+// It is located in the file: 
 // /sphere-cause-i-cant-figure-it-out-manually-lol.json
 
 function CreateMeshSphere() {

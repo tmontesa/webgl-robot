@@ -29,6 +29,7 @@ function initialize() {
     u_color = GLCreateUniform(GLUniformType.VECTOR, program, "u_color", [1.0, 1.0, 1.0]);
     init_transformations();
     init_models();
+    init_nodes();
 
     // Enable culling.
     gl.clear(gl.DEPTH_BUFFER_BIT | gl.COLOR_BUFFER_BIT);

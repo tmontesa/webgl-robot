@@ -1,4 +1,11 @@
 //
+// webgl/buffer.js
+// =========
+// A more abstract version of WebGL's buffers, with helper functions.
+//
+
+
+//
 // GLBuffer Object
 //
 

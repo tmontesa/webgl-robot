@@ -5,8 +5,17 @@
 </head>
 
 <body onload="initialize();">
-    <div id="info" class="aside bottom-left">Initializing...</div>
     <div class="aside top-left">
+        Click anywhere on the canvas to move the sphere,<br /> 
+        which will move the arm in that location.<br />
+        If the arm cannot reach it, the background will turn red.<br />
+        You may also use the sliders to move each angle.<br />
+        <br />
+        NOTE: Do not resize the window or tracking will not work!<br />
+        Reload the page if you are opening the console! (F12)
+    </div>
+    <div id="info" class="aside bottom-right">Initializing...</div>
+    <div class="aside top-right">
         Base Angle:<br />
         <input class="slider" id="base" type="range" min="-360" max="360" value="0"><br /><br />
         Lower Arm Angle:<br />
@@ -49,6 +58,7 @@
 <script src="script/init/shaders.js"></script>
 <script src="script/init/transformations.js"></script>
 <script src="script/init/models.js"></script>
+<script src="script/init/nodes.js"></script>
 
 <script src="script/game-update.js"></script>
 <script src="script/game-render.js"></script>

@@ -1,4 +1,10 @@
 //
+// webgl/attribute.js
+// =========
+// A more abstract version of WebGL's attribute, with helper functions.
+//
+
+//
 // GLAttribute Object
 //
 

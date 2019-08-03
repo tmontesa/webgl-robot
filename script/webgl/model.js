@@ -1,4 +1,12 @@
 //
+// webgl/model.js
+// =========
+// An abstraction of what a model is, with helper functions.
+// A model contains model topology, associated buffers, transforms, and color.
+//
+
+
+//
 // Model Object
 //
 

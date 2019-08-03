@@ -1,4 +1,8 @@
-
+//
+// objects/mesh/cylinder.js
+// =========
+// Creates a type Mesh containing vertices and faces of a cylinder.
+//
 
 function CreateMeshCylinder(height, radius, step) {  
    var vertices = VerticesMeshCylinder(height, radius, step);
@@ -63,19 +67,6 @@ function VerticesMeshCylinder(height, radius, step) {
             height,
             circle_vertices[(j+1) % step][1]
         ));
-
-        
-        
-        
-
-        
-        
-        
-
-        
-
-        
-
         
     }
 

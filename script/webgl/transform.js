@@ -1,3 +1,11 @@
+//
+// webgl/transform.js
+// =========
+// Contains a function that can instance an object by allowing an object to be 
+// translated, rotated, and scaled with only 1 function.
+//
+
+
 function InstanceTransform(translate_x, translate_y, translate_z, rotate_x, rotate_y, rotate_z, scale_x, scale_y, scale_z) {
     var translateXYZ = translate(translate_x, translate_y, translate_z);
 

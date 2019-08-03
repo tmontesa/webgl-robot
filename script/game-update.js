@@ -23,9 +23,6 @@ var sphere_position = {
     y: 0.0
 }
 
-var mRotateBase = mat4();
-var mRotateLArm = mat4();
-var mRotateUArm = mat4();
 var mPositionSphere = mat4();
 
 var in_progress = false;
@@ -39,36 +36,7 @@ function game_update_slider() {
     angle_uarm = Number(document.getElementById("uarm").value);
 }
 
-function game_update_base() {
-    mRotateBase = rotate(angle_base, vec3(0.0, 1.0, 0.0)); 
-}
 
-function game_update_larm() {
-    mRotateLArm = mult(
-        mRotateBase,
-        translate(0.0, base_height, 0.0),
-        
-    );
-
-    mRotateLArm = mult(
-        mRotateLArm,
-        rotate(angle_larm, vec3(0.0, 0.0, 1.0)),
-        
-    );
-}
-
-function game_update_uarm() {
-    mRotateUArm = mult(
-        mRotateLArm,
-        translate(larm_length, 0.0, 0.0),
-        
-    );
-
-    mRotateUArm = mult(
-        mRotateUArm,
-        rotate(angle_uarm, vec3(0.0, 0.0, 1.0))      
-    );
-}
 
 function game_update_sphere() {
     if (!key.MOUSE_1) { return; }
@@ -130,6 +98,24 @@ function game_update_sphere() {
     transition_time = 0.0;
 }
 
+function game_update_base() {
+    base_node.transform = rotate(angle_base, vec3(0.0, 1.0, 0.0)); 
+}
+
+function game_update_larm() {
+    larm_node.transform = mult(
+        translate(0.0, base_height, 0.0),
+        rotate(angle_larm, vec3(0.0, 0.0, 1.0))
+    );
+}
+
+function game_update_uarm() {
+    uarm_node.transform = mult(
+        translate(larm_length, 0.0, 0.0),
+        rotate(angle_uarm, vec3(0.0, 0.0, 1.0))    
+    );
+}
+
 function game_update_info() {
     document.getElementById("info").innerHTML = `
         Angle Set: (${Math.round(angle_base)}, ${Math.round(angle_larm)}, ${Math.round(angle_uarm)})<br />
@@ -172,5 +158,4 @@ function game_update() {
     game_update_uarm();
 
     game_update_info();
-    console.log(angle_larm);
 }
